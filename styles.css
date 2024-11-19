@@ -1,0 +1,75 @@
+/* Sidebar styles */
+.sidebar {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+}
+
+.sidebar .text-center h3 {
+  position: relative;
+  color: white; /* Warna teks */
+  font-weight: 600;
+  margin-top: 50px; /* Jarak dari atas */
+}
+
+.sidebar .text-center h3::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px; /* Ukuran bulatan */
+  height: 100px; /* Ukuran bulatan */
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2); /* Warna bulatan putih dengan transparansi */
+  filter: blur(5px); /* Efek blur */
+  z-index: -1; /* Menempatkan bulatan di belakang teks */
+}
+
+/* Main content */
+.main-content {
+  margin-left: 200px;
+  width: calc(100% - 250px); /* Mengisi sisa ruang di kanan sidebar */
+  padding: 20px;
+}
+
+/* Table container */
+.table-container {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Menambahkan shadow ke container tabel */
+  border-radius: 10px; /* Sudut lebih halus */
+  background-color: #ffffff; /* Latar belakang putih */
+  padding: 20px;
+}
+
+.table {
+  width: 100%; /* Agar tabel mengisi seluruh lebar kontainer */
+}
+
+/* Background color for body */
+.bg-gray-100 {
+  background-color: #f7fafc; /* Hex color code untuk gray-500 */
+}
+
+/* Sidebar links */
+.sidebar .nav-link {
+  border-radius: 10px; /* Menambahkan border-radius agar tombol lebih bulat */
+  transition: background-color 0.3s, color 0.3s; /* Transisi untuk efek hover */
+}
+
+.sidebar .nav-link:hover {
+  background-color: #000000; /* Mengubah latar belakang menjadi gray-100 saat hover */
+  color: #000000; /* Mengubah teks menjadi hitam saat hover */
+}
+
+.form-container {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Efek shadow lebih tegas */
+  border-radius: 10px; /* Menambahkan border-radius untuk sudut yang lebih halus */
+  padding: 20px; /* Memberikan ruang di dalam container */
+  background-color: #ffffff; /* Menambahkan latar belakang putih pada form dan header */
+}
+/* Mengatur tombol agar penuh lebar form */
+.btn-dark {
+  width: 100%; /* Membuat tombol lebar 100% dari form */
+}
